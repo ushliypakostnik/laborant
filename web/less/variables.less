@@ -1,0 +1,290 @@
+// MyVariables
+//////////////////////////////////////////////////////
+
+@imageUrl: "../img/";
+
+// Typographic
+//////////////////////////////////////////////////////
+
+//@icon-font-path: "../bower_components/bootstrap/fonts/";
+//@icon-font-name: "glyphicons-halflings-regular";
+
+/*@custom-icon-font-path: "../fonts/custom-font/";
+
+// Custom Icon Font
+@font-face {
+  font-family: 'fontello';
+  src: url('@{custom-icon-font-path}.eot?');
+  src: url('@{custom-icon-font-path}.eot?#iefix') format('embedded-opentype'),
+       url('@{custom-icon-font-path}.woff?') format('woff'),
+       url('@{custom-icon-font-path}.woff2?') format('woff2'),
+       url('@{custom-icon-font-path}.ttf?') format('truetype'),
+       url('@{custom-icon-font-path}.svg?#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@lightcase-font-path: "../fonts/";
+
+// Custom Icon Font
+@font-face {
+  font-family: 'fontello';
+  src: url('@{lightcase-font-path}.eot?');
+  src: url('@{lightcase-font-path}.eot?#iefix') format('embedded-opentype'),
+       url('@{lightcase-font-path}.woff?') format('woff'),
+       url('@{lightcase-font-path}.woff2?') format('woff2'),
+       url('@{lightcase-font-path}.ttf?') format('truetype'),
+       url('@{lightcase-font-path}.svg?#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}*/
+
+@font-size-base-bootstrap: 14px;
+@font-size-base: @font-size-base-bootstrap;
+@font-size-large: round(@font-size-base * 1.5);
+@font-size-medium: round(@font-size-base * 1.2);
+@font-size-normal: round(@font-size-base * 1);
+@font-size-small: round(@font-size-base * 0.8);
+@font-size-xsmall: round(@font-size-base * 0.7);
+
+@line-height-computed: round(@font-size-base-bootstrap * @line-height-base);
+@line-height-large-custom: round(@line-height-computed * 1.5);
+@line-height-medium-custom: round(@line-height-computed * 1.2);
+@line-height-normal-custom: round(@line-height-computed * 1);
+@line-height-small-custom: round(@line-height-computed * 0.8);
+@line-height-xsmall-custom: round(@line-height-computed * 0.7);
+
+@sans-font-family: 'Roboto', Tahoma, Arial, sans-serif;
+@sans-normal-font-weight: 400;
+@sans-bold-font-weight: 700;
+
+@serif-font-family: 'Roboto', Tahoma, Arial, sans-serif;
+@serif-normal-font-weight: 400;
+@serif-bold-font-weight: 700;
+
+/*
+@serif-font-family: 'Roboto Condensed', Tahoma, Arial, sans-serif;
+@serif-normal-font-weight: 400;
+@serif-bold-font-weight: 700;
+*/
+
+@normal-letter-spacing: normal;
+
+// Grid and Sizes
+//////////////////////////////////////////////////////
+
+@grid-gutter-width: 20px;
+
+@size: @grid-gutter-width;
+
+@logo-top-width: 187px;
+@logo-top-height: 47px;
+
+@product-item-image-size: 100px;
+@block-price-width: 150px;
+
+@border-width: 4px;
+
+@fixed-layout: 1000;
+
+@decor-width-large: 75px;
+@decor-width-small: 40px;
+
+@shadowCoordsX: 0;
+@shadowCoordsY: 2px;
+@shadowSize: 2px;
+@shadowStretch: 0;
+
+@textShadowCoordsX: 0;
+@textShadowCoordsY: 1px;
+@textShadowSize: 4px;
+
+// Добавляем брекпоинт для огромных десктопов
+@screen-mg: 1700px;
+
+@min-width: 320px;
+
+// Effects
+//////////////////////////////////////////////////////
+
+@transitionDuration: 0.1s;
+@transitionTimingFunction: linear;
+@transitionDelay: 0s;
+
+@fade: 10%;
+
+// Project colors
+//////////////////////////////////////////////////////
+
+@black: #000;
+@white: #fff;
+
+@gray-light: darken(#eee, @fade / 4);
+@gray: #999;
+@gray-dark: #555;
+
+@text-color: #252525;
+@text-color-light: lighten(@text-color, (@fade * 2));
+
+@blue: #2e3092;
+@blue-light: #5570d6;
+
+@yellow: #ffc20e;
+
+@green: #59a307;
+
+@strange: #ffe2ae;
+
+@red: #da141b;
+
+@main-color: @blue;
+@main-color-light: @blue-light;
+
+@active-color: @yellow;
+
+@second-color: @green;
+
+@light-color: @gray-light;
+
+@border-color: @light-color;
+
+@disabled-color: darken(@light-color, 25%);
+
+@shadowColor: rgba(0, 0, 0, 0.1);
+
+@textShadowColor: @black;
+
+@backgroundOpacityBlackColor: rgba(0, 0, 0, 0.75);
+@backgroundOpacityBlackColorLight: rgba(0, 0, 0, 0.25);
+
+@backgroundOpacityWhiteColor: rgba(255, 255, 255, 0.1);
+
+// Bootstrap Colors
+//////////////////////////////////////////////////////
+
+@brand-primary: @main-color;
+@brand-success: @second-color;
+@brand-info: @main-color-light;
+@brand-warning: @active-color;
+@brand-danger: @red;
+
+@state-danger-text: @red;
+
+// Override Bootstrap variables
+//////////////////////////////////////////////////////
+
+@state-primary-text: darken(@brand-primary, 5%);
+@state-primary-bg: fadeout(@brand-primary, 75%);
+@state-primary-border: lighten(spin(@brand-primary, -10), 20%);
+
+@state-success-text: darken(@brand-success, 5%);
+@state-success-bg: fadeout(@brand-success, 75%);
+@state-success-border: darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text: @brand-info;
+@state-info-bg: fadeout(@brand-info, 75%);
+@state-info-border: darken(spin(@state-info-bg, -10), 7%);
+
+@state-warning-text: darken(@brand-warning, 5%);
+@state-warning-bg: fadeout(@brand-warning, 70%);
+@state-warning-border: darken(spin(@state-warning-bg, -10), 5%);
+
+@state-danger-text: @brand-danger;
+@state-danger-bg: fadeout(@brand-danger, 75%);
+@state-danger-border: darken(spin(@state-danger-bg, -10), 5%);
+
+@padding-large-vertical: 13px;
+@padding-large-horizontal: @size;
+
+@border-radius-base: 0;
+@border-radius-xs: 2px;
+@border-radius-small: 3px;
+@border-radius-large: 7px;
+
+@link-color: @main-color-light;
+@link-hover-color: @main-color;
+
+@input-color-placeholder: @disabled-color;
+@input-color: @text-color;
+@input-bg: @white;
+@input-border: @border-color;
+@input-border-focus: @active-color;
+
+@dropdown-bg: @white;
+@dropdown-border: @input-border;
+@dropdown-link-hover-bg: transparent;
+@dropdown-link-color: @text-color;
+@dropdown-link-hover-color: @white;
+
+@caret-width-base: 5px;
+
+@modal-backdrop-opacity: 0.7;
+@modal-backdrop-bg: @backgroundOpacityBlackColor;
+@modal-lg: 656px;
+@modal-md: @modal-lg;
+@modal-inner-padding: 0;
+@modal-title-padding: @modal-inner-padding;
+
+@breadcrumb-bg: transparent;
+@breadcrumb-color: @disabled-color;
+@breadcrumb-active-color: @text-color-light;
+@breadcrumb-padding-horizontal: 0;
+@breadcrumb-padding-vertical: 0;
+
+@table-bg: @white;
+@table-border-color: @border-color;
+
+// Pagination
+
+@pagination-color: @text-color;
+@pagination-bg: @white;
+@pagination-border: @border-color;
+
+@pagination-hover-color: @text-color;
+@pagination-hover-bg: @gray-light;
+@pagination-hover-border: @border-color;
+
+@pagination-active-color: @white;
+@pagination-active-bg: @active-color;
+@pagination-active-border: @active-color;
+
+@pagination-disabled-color: @border-color;
+@pagination-disabled-bg: @white;
+@pagination-disabled-border: @border-color;
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+@container-tablet:             ((@content-container-sm + @grid-gutter-width));
+@container-sm:                 @container-tablet;
+
+// Medium screen / desktop
+@container-desktop:            ((@content-container-md + @grid-gutter-width));
+@container-md:                 @container-desktop;
+
+// Large screen / wide desktop
+@container-large-desktop:      ((@content-container-lg + @grid-gutter-width));
+@container-lg:                 @container-large-desktop;
+
+@content-container-sm: 720px;
+@content-container-md: 900px;
+@content-container-lg: 970px;
+
+
+// Slick Carousel Variables
+
+@slick-font-path: '../fonts/font-awesome/';
+@slick-font-family: "font-awesome";
+@slick-loader-path: @imageUrl;
+@slick-arrow-color: @main-color;
+@slick-dot-color: @black;
+@slick-dot-color-active: @slick-dot-color;
+@slick-prev-character: "\e807";
+@slick-next-character: "\e806";
+@slick-dot-character: "•";
+@slick-dot-size: 6px;
+@slick-opacity-default: 0.75;
+@slick-opacity-on-hover: 1;
+@slick-opacity-not-active: 0.25;

@@ -1,0 +1,175 @@
+// MyMixin
+//////////////////////////////////////////////////////
+
+// Typographic
+//////////////////////////////////////////////////////
+
+// Используем ОДНУ универсальную примесь для всех случаев!!!!!!!!!!
+
+.text(@fontFamily, @fontSize, @fontWeight) {
+    font-family: @fontFamily;
+    font-weight: @fontWeight;
+    font-size: @fontSize;
+    letter-spacing: @normal-letter-spacing;
+}
+.text (@fontFamily, @fontSize, @fontWeight) when (@fontSize = @font-size-large) {
+    line-height: @line-height-large-custom;
+}
+.text (@fontFamily, @fontSize, @fontWeight) when (@fontSize = @font-size-medium) {
+    line-height: @line-height-medium-custom;
+}
+.text (@fontFamily, @fontSize, @fontWeight) when (@fontSize = @font-size-normal) {
+    line-height: @line-height-normal-custom;
+}
+.text (@fontFamily, @fontSize, @fontWeight) when (@fontSize = @font-size-small) {
+    line-height: @line-height-small-custom;
+}
+.text (@fontFamily, @fontSize, @fontWeight) when (@fontSize = @font-size-xsmall) {
+    line-height: @line-height-xsmall-custom;
+}
+
+// Vendors
+//////////////////////////////////////////////////////
+
+.border-radius(@border-radius-base) {
+    -webkit-border-radius: @arguments;
+        -khtml-border-radius: @arguments;
+            -moz-border-radius: @arguments;
+                -o-border-radius: @arguments;
+                    border-radius: @arguments;
+}
+
+.borderRadius(@radiusTopLeft, @radiusTopRight, @radiusRightBottom, @radiusLeftBottom) {
+    -webkit-border-radius: @arguments;
+        -khtml-border-radius: @arguments;
+            -moz-border-radius: @arguments;
+                -o-border-radius: @arguments;
+                    border-radius: @arguments;
+}
+
+.boxShadow(@shadowCoordsX, @shadowCoordsY, @shadowSize, @shadowStretch, @shadowColor) {
+    box-shadow: @arguments;
+        -moz-box-shadow: @arguments;
+            -webkit-box-shadow: @arguments;
+                filter: progid:DXImageTransform.Microsoft.shadow(direction=0, color=@shadowColor, strength=@shadowCoordsY);
+}
+
+.boxShadowInset(@shadowCoordsX, @shadowCoordsY, @shadowSize, @shadowStretch, @shadowColor) {
+    box-shadow: inset @arguments;
+        -moz-box-shadow: inset @arguments;
+            -webkit-box-shadow: inset @arguments;
+                filter: progid:DXImageTransform.Microsoft.shadow(direction=0, color=@shadowColor, strength=@shadowCoordsY);
+}
+
+.gradientTopBottom(@colorTop, @colorBottom) {
+    background: @colorTop; // for non-css3 browsers
+    background-repeat: repeat-y; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = @colorTop, endColorstr = @colorBottom, GradientType=0); // IE6-9
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(@colorTop), color-stop(@colorBottom)); // Chrome, Safari4+
+    background: -webkit-linear-gradient(top, @colorTop 0%, @colorBottom 100%); // Chrome10+, Safari5.1+
+    background: -moz-linear-gradient(top,  @colorTop 0%, @colorBottom 100%); // firefox 3.6+
+    background: -o-linear-gradient(top,  @colorTop 0%, @colorBottom 100%); // Opera 11.10+
+    background: -ms-linear-gradient(top,  @colorTop 0%, @colorBottom 100%); // IE10+
+    background: linear-gradient(to bottom, @colorTop 0%, @colorBottom 100%); // W3C
+}
+
+.gradientLeftRight(@colorLeft, @colorRight) {
+    background: @colorLeft; // for non-css3 browsers
+    background-repeat: repeat-x; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = @colorLeft, endColorstr = @colorRight, GradientType=1); // IE6-9
+    background: -webkit-gradient(linear, 0 top, 100% top, color-stop(@colorLeft), color-stop(@colorRight)); // Chrome, Safari4+
+    background: -webkit-linear-gradient(left, @colorLeft 0%, @colorRight 100%); // Chrome10+, Safari5.1+
+    background: -moz-linear-gradient(top,  @colorLeft 0%, @colorRight 100%); // firefox 3.6+
+    background: -o-linear-gradient(to top, @colorLeft 0%, @colorRight 100%); // Opera 11.10+
+    background: -ms-linear-gradient(top,  @colorLeft 0%, @colorRight 100%); // IE10+
+    background: linear-gradient(to right, @colorLeft 0%, @colorRight 100%); // W3C
+}
+
+.transition(@property, @duration, @timing-function, @delay) {
+    transition: @property, @duration, @timing-function, @delay;
+        -webkit-transition: @property, @duration, @timing-function, @delay;
+            -moz-transition: @property, @duration, @timing-function, @delay;
+                -o-transition: @property, @duration, @timing-function, @delay;
+}
+
+.selection(@color) {
+    ::selection {background: @color;}
+        ::-moz-selection {background: @color;}
+            ::-webkit-selection {background: #ccc; color:@color;}
+}
+
+// Elements
+//////////////////////////////////////////////////////
+
+.link-style-mixin(@color, @color-hover) {
+    &, &:focus {
+        color: @color;
+        text-decoration: underline;
+    }
+    &:hover, &:active {
+        color: @color-hover;
+        text-decoration: none;
+    }
+    @media (max-width: @screen-sm-max) {
+        &, &:hover, &:focus {
+            color: @color;
+            text-decoration: underline;
+        }
+        &:active {
+            color: @color-hover;
+            text-decoration: none;
+        }
+    }
+}
+
+.ico-square-size-mixin(@size) {
+    .border-radius(0);
+    .size(@size,@size);
+    line-height: @size;
+    .fa, .glyphicon, .icon {
+        margin-right: 0;
+    }
+}
+
+.btn-color-mixin(@color, @background) {
+    background-color: @background;
+    color: @color;
+    &:hover, &:active {
+        background-color: lighten(@background, @fade);
+        color: @color;
+    }
+    @media (max-width: @screen-sm-max) {
+        &, &:hover, &:focus {
+            background-color: @background;
+            color: @color;
+        }
+        &:active {
+            background-color: lighten(@background, @fade);
+            color: @color;
+        }
+    }
+}
+
+// Help
+//////////////////////////////////////////////////////
+
+.quoteContent {
+    &:before {
+        content: open-quote;
+    }
+    &:after {
+        content: close-quote;
+    }
+    &:before, &:after {
+        color: inherit;
+    }
+}
+
+// Loops
+//////////////////////////////////////////////////////
+
+.setBackgroundImage(@n, @i: 1) when (@i =< @n) {
+    &.style-image-@{i} {
+        background: url("@{imageUrl}img_@{i}.jpg") center center no-repeat;
+        background-size: contain;
+    }
+    .setBackgroundImage(@n, (@i + 1));
+}

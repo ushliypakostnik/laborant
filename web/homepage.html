@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="{{ description }}" />
+    <meta name="keywords" content="{{ keywords }}" />
+    <title>Производство лабораторной мебели, поставка лабораторного оборудования и аналитических приборов. Промышленная группа «Лаборант» (812) 318-50-90.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+    <script>
+        var ieVersion = (function() {
+            var ua = window.navigator.userAgent;
+            var msie = ua.indexOf('MSIE');
+            if (msie > 0) {
+                return parseInt (ua.substring(msie + 5, ua.indexOf('.', msie)));
+            }
+            return 0;
+        })();
+        if (ieVersion && ieVersion < 6) {
+            location.href = './legacy.html';
+        }
+    </script>
+
+<!-- @if NODE_ENV='development' -->
+    <link href="./less/styles.less" type="text/css" rel="stylesheet/less" />
+    <script>
+        var less = {
+            env: 'development'
+        };
+    </script>
+    <script src="./bower_components/less/dist/less.js"></script>
+
+    <!--[if lt IE 9]>
+        <link href="./css/ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if lt IE 10]>
+        <script src="./bower_components/respond/dest/respond.src.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="./bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+<!-- @endif -->
+
+<!-- @if NODE_ENV='production' !>
+    <link href="./css/styles.min.css" rel="stylesheet" type="text/css" />
+
+    <!--[if lt IE 9]>
+        <link href="./css/ie8.min.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if lt IE 10]>
+        <script src="./js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+        <script src="./js/html5shiv.min.js"></script>
+    <![endif]-->
+<!-- @endif -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic" rel="stylesheet">
+
+    <link rel="icon" type="image/jpeg" href="./img/favicon.ico" />
+</head>
+<body>
+
+    <!-- page content -->
+
+    <div class="page homepage">
+
+        <header>
+            <div class="container">
+                <div class="hotline">
+                    <div class="hotline-block"><a href="mailto:sales@laborant.net">sales@laborant.net</a></div
+                    ><div class="hotline-block">8 (812) 318-50-90</div
+                    ><div class="hotline-block">8 (800) 555-777-9</div>
+                </div>
+            </div>
+            <nav role="navigation">
+                <div class="container">
+                    <ul class="hidden-xs">
+                        <li>
+                            <a href="#" title="Каталог оборудования">Продукция</a>
+                        </li
+                        ><li>
+                            <a href="#" title="Распродажа оборудования">Спец.&nbsp;предложения</a>
+                        </li
+                        ><li>
+                            <a href="#" title="Прайс-листы с ценами на продукцию">Прайс-листы</a>
+                        </li
+                        ><li>
+                            <a href="#" title="Каталоги">Каталоги</a>
+                        </li
+                        ><li>
+                            <a href="#" title="Ответы на часто задаваемые вопросы">Вопросы&nbsp;и&nbsp;ответы</a>
+                        </li
+                        ><li>
+                            <a href="#" title="Информация о нашей компании">Компания</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown visible-xs">
+                    <button type="button" class="btn btn-lg btn-square dropdown-toggle pull-right" data-toggle="dropdown"><i class="fa fa-navicon"></i></button>
+                    <ul class="dropdown-menu pull-right" role="menu">
+                        <li>
+                            <a href="#">Продукция</a>
+                        </li
+                        ><li>
+                            <a href="#">Спец.&nbsp;предложения</a>
+                        </li
+                        ><li>
+                            <a href="#">Прайс-листы</a>
+                        </li
+                        ><li>
+                            <a href="#">Каталоги</a>
+                        </li
+                        ><li>
+                            <a href="#">Вопросы&nbsp;и&nbsp;ответы</a>
+                        </li
+                        ><li>
+                            <a href="#">Компания</a>
+                        </li>
+                  </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="#" class="logo-top" role="banner"></a>
+                    <a href="#" class="logo-scroll" role="banner"></a>
+                </div>
+            </div>
+        </header>
+
+        <div class="page-body">
+            <div class="container">
+                <div class="content-body">
+
+                    <main class="main-content" role="main">
+                        <section class="section-main">
+                            <form class="form form-inline form-style">
+                                <div class="container-fluid half">
+                                    <h4>Быстрый поиск по продукции</h4>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                                    <label for="pname" class="control-label">Название оборудования</label>
+                                    <input type="text" class="form-control" id="pname" name="artikul" value="" />
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <label for="artikul" class="control-label">Артикул</label>
+                                    <input type="text" class="form-control" id="artikul" name="artikul" value="" />
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <button type="submit" class="btn btn-lg btn-block">Найти</button>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <a href="#">Расширенный поиск</a
+                                    ><a href="#">Каталог</a>
+                                </div>
+                            </form>
+
+                            <div class="row row-main">
+                                <div class="col-xs-12 col-sm-5 col-md-4 col-lg-4">
+                                    <div id="slick-slider-main">
+                                        <div>
+                                            <div class="style-image style-image-1"></div>
+                                        </div>
+                                        <div>
+                                            <div class="style-image style-image-2"></div>
+                                        </div>
+                                        <div>
+                                            <div class="style-image style-image-3"></div>
+                                        </div>
+                                        <div>
+                                            <div class="style-image style-image-4"></div>
+                                        </div>
+                                        <div>
+                                            <div class="style-image style-image-5"></div>
+                                        </div>
+                                        <div>
+                                            <div class="style-image style-image-6"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-8 col-lg-8">
+                                    <h2>Лабораторное оборудование и приборы, лабораторная мебель</h2>
+                                    <p>Добрый день!</p>
+                                    <p>Вас приветствует один из ведущих поставщиков на российском рынке лабораторного оборудования. Представленные на нашем сайте лабораторные приборы и <a href="#">лабораторная мебель</a> отвечает самым строгим требованиям любого предприятия.</p>
+                                    <p>Здесь представлены как недорогие измерительные приборы и оборудование для пробоподготовки, так и высокоточные аналитические приборы известных мировых производителей, представленные в различных конфигурациях - для исследовательских нужд, выполнения рутинных задач, для проведения анализов в лабораториях, контроля качества продукции и исследования окружающей среды.</p>
+                                    <p>Для выбора оборудования по определенным критериям Вы можете воспользоваться параметрическим поиском. А следуя по ветвям каталога товаров, можно просматривать интересующие Вас разделы, знакомиться с характеристиками представленных товаров, сравнивать  их, а при необходимости консультироваться со специалистами компании.</p>
+                                    <p>Мы гордимся качеством производимой нами продукции - на сайте представлены профессиональные фото высокого разрешения (например: <a href="#">вытяжной шкаф ВШ-2</a>, <a href="#">вытяжной шкаф ВШ-3</a>, <a href="#">стол титровальный СТ-1</a>) или сделанные профессионально 3D-фреймы, с передачей цвета и фактуры материалов (<a href="#">комплект мебели Химик-1</a>). Также, еще до размещения заказа на нашу продукцию, Вы можете получить для испытаний образцы материалов, используемых в производстве.</p>
+                                    <p><strong>Мы всегда имеем готовые решения для Вас.</strong></p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section-offer">
+                            <h2 class="header-style">Наиболее интересные предложения по лабораторному оборудованию</h2>
+
+                            <h3>Рекомендуем:</h3>
+
+                            <div class="row row-offer">
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-1"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Глубиномер-угломер скважинный. ИУГС (Измеритель Угла и Глубины Скважин)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-2"><span class="image-overlay"></span></a>
+                                        <!-- Пример блока цены с конкретной ценой!!! -->
+                                        <div class="block-price"><div class="label">Цена:</div><div class="value">350 000 руб.</div></div>
+                                        <div class="offer-links">
+                                            <a href="#">Экспресс анализатор химического состава сплавов драгоценных металлов GoldXpert - Прибор для определения пробы золота</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-3"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы сплавов и металлов Delta Classic. Портативный (ручной) XRF спектрометр сменил анализатор Alpha Series 2000, SiPin детектор, 4 Вт.</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-4"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы металлов и сплавов Delta Element. Портативный рентгенофлуоресцентный энергодисперсионный XRF спектрометр</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-5"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Баня водяная (жидкостной термостат) серологическая лабораторная БСЛ-102(ПГЛ)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-6"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Вытяжной шкаф серии ПГЛ цельнохимостойкий</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-1"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Глубиномер-угломер скважинный. ИУГС (Измеритель Угла и Глубины Скважин)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-2"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Экспресс анализатор химического состава сплавов драгоценных металлов GoldXpert - Прибор для определения пробы золота</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-3"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы сплавов и металлов Delta Classic. Портативный (ручной) XRF спектрометр сменил анализатор Alpha Series 2000, SiPin детектор, 4 Вт.</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-4"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы металлов и сплавов Delta Element. Портативный рентгенофлуоресцентный энергодисперсионный XRF спектрометр</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-5"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Баня водяная (жидкостной термостат) серологическая лабораторная БСЛ-102(ПГЛ)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-6"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Вытяжной шкаф серии ПГЛ цельнохимостойкий</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-1"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Глубиномер-угломер скважинный. ИУГС (Измеритель Угла и Глубины Скважин)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-2"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Экспресс анализатор химического состава сплавов драгоценных металлов GoldXpert - Прибор для определения пробы золота</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-3"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы сплавов и металлов Delta Classic. Портативный (ручной) XRF спектрометр сменил анализатор Alpha Series 2000, SiPin детектор, 4 Вт.</a>
+                                            <div><a href="#" class="brand">Innov-X Systems</a>, <a href="#" class="brand">США</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-4"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Анализаторы металлов и сплавов Delta Element. Портативный рентгенофлуоресцентный энергодисперсионный XRF спектрометр</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-5"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Баня водяная (жидкостной термостат) серологическая лабораторная БСЛ-102(ПГЛ)</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="block-offer">
+                                        <a herf="#" class="style-image style-image-6"><span class="image-overlay"></span></a>
+                                        <div class="block-price"><div class="label">Цена:</div><a href="#">по запросу</a></div>
+                                        <div class="offer-links">
+                                            <a href="#">Вытяжной шкаф серии ПГЛ цельнохимостойкий</a>
+                                            <div><a href="#" class="brand">Промгруппа ЛАБОРАНТ</a>, <a href="#" class="brand">Россия</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="block-button">
+                                <button type="button" id="productsMore" class="btn btn-lg">Больше предложений<i class="fa fa-angle-down"></i></button>
+                            </div>
+                        </section>
+
+                        <section class="section-bottom">
+                            <h2 class="header-style">Производство лабораторной  мебели на металлокаркасе (из алюминия, стекла, пластика)</h2>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p>Мы - <a href="#">производители качественной лабораторной и медицинской мебели</a> из алюминия, стекла и пластика. Наша продукция хорошо известна и не имеет аналогов в России, хотя, к сожалению, встречаются низкокачественные подделки, изготовленные  с нарушением технологии из дешевых материалов - будьте внимательны!. Нашу продукцию можно приобрести как у нас, так и у наших дилеров в регионах России и странах СНГ.</p>
+                                    <p>В частности, мы производим:</p>
+                                    <ul>
+                                        <li><a href="#">вытяжные шкафы</a>,</li>
+                                        <li><a href="#">шкафы лабораторные общего назначения</a>,</li>
+                                        <li><a href="#">шкафы для хранения реактивов</a>,</li>
+                                        <li><a href="#">лабораторные столы</a>.</li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <p>Чтобы приобрести предлагаемую нами продукцию, достаточно  отправить заявку на требуемое изделие. Заявку можно отправить любым удобным способом:</p>
+                                    <ul>
+                                        <li>по электронной почте</li>
+                                        <li>по факсу</li>
+                                    </ul>
+                                    <p>- и наш менеджер свяжется с Вами.</p>
+                                    <p>Наши специалисты всегда готовы помочь составить эксклюзивный дизайн-макет Вашей лаборатории в 3D-проекции, удовлетворяющий Вашим требованиям,как по функциональности, так и по используемым в производстве материалам.</p>
+                                    <p>Как производитель, мы предлагаем также <a href="#">типовые комплекты лабораторной мебели</a> — это позволяет получить значительную экономию при небольших заказах.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </main>
+
+                </div>
+            </div>
+        </div>
+
+        <footer role="contentinfo">
+            <div class="container">
+
+                <div class="footer-block-main">
+                    <h3>Горячая линия:</h3>
+                    <div>8 (800) 555-777-9</div>
+                    <div><a href="mailto:sales@laborant.net">sales@laborant.net</a></div>
+                </div>
+
+                <ul>
+                    <li><a href="#">Вопросы и ответы</a>
+                        <ul>
+                            <li><a href="#">Заказ и оплата</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Сервис</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Специалисту</a>
+                        <ul>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Справочники</a></li>
+                            <li><a href="#">Законодательство</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Компания</a>
+                        <ul>
+                            <li><a href="#">Партнеры</a></li>
+                            <li><a href="#">Вакансии</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="footer-block-bottom">
+                    <address>&copy; 2006 Промышленная группа &laquo;Лаборант&raquo;</address>
+                    <a href="#" title="Карта сайта">Карта сайта</a>
+                </div>
+
+                <div class="footer-block-counts">
+                    <div>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- /page content -->
+
+<!-- @if NODE_ENV='development' -->
+
+    <script src="./bower_components/jquery/dist/jquery.js"></script>
+    <!--[if lt IE 9]>
+        <script src="./bower_components/jquery1.10/jquery.js"></script>
+    <![endif]-->
+
+    <script src="./bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="./bower_components/slick-carousel/slick/slick.min.js"></script>
+
+    <script src="./js/logger.js"></script>
+    <script src="./js/bootstrap-helper.js"></script>
+
+    <script src="./js/app/homepage.js"></script>
+    <script src="./js/app/page-template.js"></script>
+
+    <script>var debug = true;</script>
+<!-- @endif -->
+
+<!-- @if NODE_ENV='production' !>
+    <script src="./js/app.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="./js/app-lt-ie9.min.js"></script>
+    <![endif]-->
+
+    <script>var debug = false;</script>
+<!-- @endif -->
+
+    <script>
+        PageTemplate.init({
+            debug: debug
+        });
+        Homepage.init({
+            debug: debug
+        });
+    </script>
+</body>
+</html>

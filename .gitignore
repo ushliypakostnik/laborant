@@ -1,0 +1,8 @@
+node_modules
+output
+web/bower_components
+web/static
+
+npm-debug.log
+
+*.sublime-workspace
