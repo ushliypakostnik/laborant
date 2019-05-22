@@ -1,5 +1,8 @@
 Laborant frontend project
-===========================
+=========================
+
+История дизайна: http://levon.kafedra.org/freelance/laborant/
+
 
 Deploy
 ------
