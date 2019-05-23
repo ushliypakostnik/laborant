@@ -1,5 +1,5 @@
-Laborant frontend project
-=========================
+Laborant.net static project
+===========================
 
 История дизайна: http://levon.kafedra.org/freelance/laborant/
 
